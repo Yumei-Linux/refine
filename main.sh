@@ -24,6 +24,10 @@ cat > /etc/hosts << EOF
 ::1         
 EOF
 
+cat > /etc/shells << EOF
+/bin/bash
+EOF
+
 cat > /etc/passwd << EOF
 root:x:0:0:root:/root:/bin/bash
 bin:x:1:1:bin:/dev/null:/usr/bin/false
