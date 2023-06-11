@@ -87,4 +87,22 @@ chgrp -v utmp /var/log/lastlog
 chmod -v 664 /var/log/lastlog
 chmod -v 600 /var/log/btmp
 
+cat > /etc/os-release << "EOF"
+NAME="Yumei Linux"
+ID="yumei"
+PRETTY_NAME="Yumei GNU/Linux"
+HOME_URL="https://github.com/yumei-linux"
+DOCUMENTATION_URL="https://github.com/yumei-linux/notes"
+LOGO="yumei-logo"
+ANSI_COLOR="0;38;2;255;0;255"
+DISTRIB_ID="yumei"
+EOF
+
+cat > /etc/lsb-release << "EOF"
+DISTRIB_ID="Yumei Linux"
+DISTRIB_RELEASE="barebones"
+DISTRIB_CODENAME="yumei"
+DISTRIB_DESCRIPTION="Yumei Linux"
+EOF
+
 exec /usr/bin/bash --login
